@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50">
+    <title>Plank Timer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h2 class="timer-title">Plank Timer</h2>
+        <h1 id="timer-display">0:00</h1>
+        <div class="settings">
+            <label>
+                Plank Time (minutes):
+                <input type="number" id="plank-time" min="1" max="60" value="1">
+            </label>
+            <label>
+                Interval Time (seconds):
+                <input type="number" id="interval-time" step="10" min="10" max="300" value="30">
+            </label>
+        </div>
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="reset-button">Reset</button>
+        <p>Completed Planks: <span id="completed-count">0</span></p>
+    </div>
+    <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
